@@ -18,7 +18,7 @@ $("#searchButton").on('click', e => {
   e.preventDefault();
   if (query.val() !== ' ') {
     fetch(
-      `https://api.unsplash.com/search/photos?query=${query.val()}&page=1&client_id=${ApiKey}`
+      `https://api.unsplash.com/search/photos?query=${query.val()}&page=2&client_id=${ApiKey}`
     )
       .then(Response => {
         console.log(Response);
