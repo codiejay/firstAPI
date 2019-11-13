@@ -114,10 +114,7 @@ $('body').on('click', e => {
 
 
 // working on getting random background. 
-
-
-
-fetch(`https://api.unsplash.com/photos/random?client_id=${ApiKey}&query="black"`)
+fetch(`https://api.unsplash.com/photos/random?client_id=${ApiKey}&query="girl"`)
     .then( (data) => {return data.json()} )
       .then(ImageData =>  { 
         main.css(`background`, `linear-gradient(to top right, #f193fb3b, #f5576c), url(${ImageData.urls.regular})`)
