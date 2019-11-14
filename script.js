@@ -124,5 +124,14 @@ fetch(`https://api.unsplash.com/photos/random?client_id=${ApiKey}&query="girl"`)
       } );
       
 
+      // Enter triggers search button
+
+var input = document.getElementById("query");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) 
+    event.preventDefault();
+    document.getElementById("searchButton").click();
+  }); 
+
 
 
