@@ -14,7 +14,7 @@ resultPage.hide();
 
 let ApiKey = 'a2c52360401a8d4b3543f5ef051e3f2637da2dff30442f7ff72ad891b59227cd';
 
-$("form").on('click', e => {
+$(form).on('click', e => {
   e.preventDefault();
   if (query.val() !== ' ') {
     fetch(
