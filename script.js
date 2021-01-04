@@ -14,7 +14,7 @@ resultPage.hide();
 
 let ApiKey = 'a2c52360401a8d4b3543f5ef051e3f2637da2dff30442f7ff72ad891b59227cd';
 
-$(form).on('click', e => {
+$("#searchButton").on('click', e => {
   e.preventDefault();
   if (query.val() !== ' ') {
     fetch(
@@ -72,7 +72,6 @@ $('body').on('click', e => {
     ).attr('src')}); background-size: cover; background-position: center">
         
       </div>
-
       <div class="imgInfo">
       <img src=${$(
         $(
@@ -100,7 +99,6 @@ $('body').on('click', e => {
               .children()[3]
           ).children()[1]
         ).text()}</span></p>
-
         <b id="cancelShowcase" >X</b>
       </div>
     `).appendTo($('.imgShowCase'));
@@ -114,7 +112,10 @@ $('body').on('click', e => {
 
 
 // working on getting random background. 
-fetch(`https://api.unsplash.com/photos/random?client_id=${ApiKey}&query="girl"`)
+
+
+
+fetch(`https://api.unsplash.com/photos/random?client_id=${ApiKey}&query="black"`)
     .then( (data) => {return data.json()} )
       .then(ImageData =>  { 
         main.css(`background`, `linear-gradient(to top right, #f193fb3b, #f5576c), url(${ImageData.urls.regular})`)
@@ -122,7 +123,3 @@ fetch(`https://api.unsplash.com/photos/random?client_id=${ApiKey}&query="girl"`)
         main.css(`background-size`, `cover`)
      
       } );
-      
-
-
-
